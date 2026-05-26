@@ -945,8 +945,8 @@ async def home():
 
 @app.post("/analyze")
 async def analyze(sow_text: str = Form(...)):
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        raise HTTPException(status_code=500, detail="ANTHROPIC_API_KEY not set")
+    if not os.environ.get("GEMINI_API_KEY"):
+        raise HTTPException(status_code=500, detail="GEMINI_API_KEY not set")
 
     try:
         parsed = parse_sow(sow_text)

@@ -1,5 +1,5 @@
 """
-SOW parser using Claude API.
+SOW parser using Gemini API.
 Extracts structured deliverables, milestones, constraints, and context from raw SOW text.
 """
 import json
@@ -8,7 +8,7 @@ import re
 from dataclasses import dataclass, field, asdict
 from typing import Optional
 
-from anthropic import Anthropic
+import google.generativeai as genai
 
 
 @dataclass
@@ -120,24 +120,24 @@ Rules:
 
 def parse_sow(sow_text: str) -> ParsedSOW:
     """
-    Send SOW text to Claude API and parse the structured response.
+    Send SOW text to Gemini API and parse the structured response.
     """
-    client = Anthropic()
+    genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
 
-    message = client.beta.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=16000,
-        betas=["output-128k-2025-02-19"],
-        system=SYSTEM_PROMPT,
-        messages=[
-            {
-                "role": "user",
-                "content": f"Analyze this Statement of Work and extract the structured information:\n\n{sow_text}"
-            }
-        ]
+    model = genai.GenerativeModel(
+        model_name="gemini-1.5-pro",
+        system_instruction=SYSTEM_PROMPT,
     )
 
-    raw = message.content[0].text
+    response = model.generate_content(
+        f"Analyze this Statement of Work and extract the structured information:\n\n{sow_text}",
+        generation_config={
+            "temperature": 0.1,
+            "max_output_tokens": 8192,
+        },
+    )
+
+    raw = response.text
 
     # Clean potential markdown fencing
     cleaned = raw.strip()

@@ -54,9 +54,9 @@ def main():
     args = parser.parse_args()
 
     # Check for API key
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        console.print("[red]Error:[/red] ANTHROPIC_API_KEY environment variable not set.")
-        console.print("Set it with: export ANTHROPIC_API_KEY=sk-ant-...")
+    if not os.environ.get("GEMINI_API_KEY"):
+        console.print("[red]Error:[/red] GEMINI_API_KEY environment variable not set.")
+        console.print("Set it with: export GEMINI_API_KEY=your-key-here")
         sys.exit(1)
 
     console.print(Panel("Double Line — SOW Decomposition Engine", style="bold blue"))
