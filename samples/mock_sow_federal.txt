@@ -1,0 +1,131 @@
+STATEMENT OF WORK
+Double Line Inc. — Professional Services Engagement
+
+Client: U.S. Department of Commerce — Bureau of Economic Analysis
+SOW Number: DL-FED-2026-0091
+Contract Vehicle: GSA IT Schedule 70
+Effective Date: July 1, 2026
+Period of Performance: 12 weeks
+
+1. PURPOSE
+
+Double Line will perform a Google Workspace for Government migration and Google Cloud Platform infrastructure deployment for the Bureau of Economic Analysis (BEA). The engagement will migrate approximately 850 users from an on-premises Microsoft Exchange 2016 environment to Google Workspace for Government, and deploy a data analytics environment on Google Cloud Platform within the FedRAMP-authorized boundary.
+
+2. APPLICABLE STANDARDS AND REGULATIONS
+
+- FedRAMP Moderate baseline (per NIST SP 800-53 Rev. 5)
+- FISMA compliance requirements
+- OMB Memorandum M-21-31 (logging and endpoint detection)
+- CISA Binding Operational Directive 22-01
+- Agency-specific security policies as documented in BEA System Security Plan
+
+3. SCOPE OF WORK
+
+3.1 Google Workspace for Government Migration
+
+3.1.1 Discovery
+- Technical assessment of Exchange 2016 environment
+- Directory services audit (Active Directory)
+- Mailbox inventory and data volume assessment
+- Third-party integration documentation
+- Security posture baseline assessment against FedRAMP Moderate controls
+
+3.1.2 Planning
+- Migration architecture with coexistence strategy
+- Wave planning across 3 bureau divisions
+- Change management and communications plan
+- FedRAMP control mapping for customer-responsible controls
+- Risk register including compliance-specific risks
+- System Security Plan (SSP) update for migration scope
+
+3.1.3 Build
+- Google Workspace for Government tenant in FedRAMP-authorized region
+- GCDS directory synchronization with on-premises AD
+- SAML SSO integration with agency PIV/CAC authentication
+- DLP policies per agency data classification requirements
+- Mobile device management via Google Endpoint Management
+- Chrome Browser Cloud Management policy deployment
+- Audit logging configuration per M-21-31 requirements
+
+3.1.4 Migration
+- Email migration for 850 users across 3 waves
+- Shared drive migration (estimated 400 GB)
+- Calendar and contacts migration
+
+3.1.5 Training
+- Three role-based training sessions
+- IT administrator training on Workspace admin console
+- Security team training on Google security center and investigation tool
+
+3.1.6 Cutover and Hypercare
+- DNS and mail flow cutover coordination with agency NOC
+- 15 business days post-migration hypercare
+- Data integrity validation
+
+3.2 GCP Data Analytics Environment
+
+3.2.1 Infrastructure
+- GCP organization and project setup within FedRAMP boundary
+- VPC network configuration with agency connectivity (VPN)
+- IAM and access control aligned to agency RBAC model
+- Cloud Monitoring and Cloud Logging configuration
+- Encryption with customer-managed keys (CMEK) via Cloud KMS
+
+3.2.2 Data Platform
+- BigQuery data warehouse for economic indicator datasets
+- Cloud Composer (Airflow) pipeline for automated data ingestion
+- Looker dashboards for bureau leadership reporting
+- VPC Service Controls to prevent data exfiltration
+
+3.3 Compliance and Authorization
+
+- FedRAMP control gap assessment for customer-responsible controls
+- System Security Plan updates for new cloud services
+- Plan of Action and Milestones (POAM) for identified gaps
+- Support for agency ATO review process
+- NIST 800-53 continuous monitoring implementation
+- Monthly vulnerability scanning and reporting
+
+4. OUT OF SCOPE
+
+- Application development or custom software beyond Looker dashboards
+- Hardware procurement or physical infrastructure changes
+- PIV/CAC card issuance or identity verification (agency responsibility)
+- Penetration testing (agency will contract separately)
+- Any work requiring access to classified (IL4+) data
+
+5. DELIVERABLES (CDRLs)
+
+CDRL-001: Technical Discovery Report (Week 2)
+CDRL-002: Migration Architecture Document (Week 3)
+CDRL-003: Updated System Security Plan (Week 4)
+CDRL-004: FedRAMP Control Gap Assessment (Week 4)
+CDRL-005: Plan of Action and Milestones (Week 5)
+CDRL-006: Migration Completion Report per wave (Weeks 6, 8, 10)
+CDRL-007: Training Completion Certificate (Week 9)
+CDRL-008: Continuous Monitoring Procedures Document (Week 10)
+CDRL-009: Project Closeout Report (Week 12)
+
+6. PROJECT TEAM
+
+Double Line:
+- 1 Senior Project Manager (30% allocation)
+- 2 Cloud Engineers (80% allocation each)
+- 1 Security Engineer (50% allocation)
+- 1 Change Manager (40% allocation)
+
+Client (BEA):
+- Information System Security Officer (ISSO)
+- Authorizing Official (AO) designee
+- IT Division Director
+- Division leads for each migration wave
+- NOC point of contact
+
+7. PRICING
+
+Firm Fixed Price: $312,000.00 USD
+Payment Terms: Monthly invoicing against milestone completion per CDRLs
+
+8. SECURITY REQUIREMENTS
+
+All Double Line personnel must hold active Public Trust clearance or higher. Background investigations must be completed prior to accessing agency systems. All work must be performed within CONUS.

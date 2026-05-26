@@ -1,0 +1,117 @@
+STATEMENT OF WORK
+Double Line Inc. — Professional Services Engagement
+
+Client: Meridian Health Partners
+SOW Number: DL-2026-0847
+Effective Date: June 15, 2026
+Project Duration: 8 weeks
+
+1. EXECUTIVE SUMMARY
+
+Double Line will perform a Google Workspace migration and enablement engagement for Meridian Health Partners ("Client"). The engagement will migrate approximately 2,200 users from Microsoft 365 to Google Workspace Enterprise, including email, calendaring, file storage, and collaboration tools. The project will include directory synchronization, data migration, end-user training, and post-migration support.
+
+2. SCOPE OF WORK
+
+2.1 In-Scope Deliverables
+
+2.1.1 Discovery & Assessment
+- Technical assessment of current Microsoft 365 environment
+- Inventory of mailbox sizes, distribution lists, shared mailboxes, and mail flow rules
+- Documentation of third-party integrations connected to M365
+- Assessment of current mobile device management configuration
+- Stakeholder identification and kickoff meeting
+
+2.1.2 Planning & Architecture
+- Migration architecture design document including coexistence strategy
+- Migration wave plan (minimum 4 waves, prioritized by department)
+- Change management and communications plan
+- Risk register and escalation procedures
+- Detailed project schedule with milestones
+
+2.1.3 Build & Configuration
+- Google Workspace tenant provisioning and configuration
+- Organizational unit and group structure setup
+- Directory synchronization using GCDS
+- SAML SSO federation with client's Azure AD identity provider
+- Data Loss Prevention (DLP) policy configuration per client security requirements
+- Chrome Browser Cloud Management policy deployment
+- Google Workspace security policies (2FA enforcement, session controls, app access)
+
+2.1.4 Migration Execution
+- Email migration for all 2,200 users across 4 planned waves
+- Google Drive migration of departmental shared drives (estimated 1.8 TB)
+- Calendar and contacts migration
+
+2.1.5 Training & Adoption
+- Four end-user training sessions (tailored for general staff, executives, IT, and power users)
+- Train-the-trainer program for 8 internal champions
+- Quick reference guides and FAQ documentation
+
+2.1.6 Cutover & Go-Live
+- DNS cutover coordination and MX record transition
+- Mail flow validation (SPF, DKIM, DMARC)
+- Go-live monitoring and issue triage
+
+2.1.7 Hypercare
+- 10 business days of post-migration support
+- Daily triage of migration-related support tickets
+- Data integrity validation and remediation
+
+2.2 Out of Scope
+- Migration of Microsoft Teams channels or chat history
+- Custom application development or integrations beyond those documented in Discovery
+- Physical hardware procurement or deployment
+- SSO integration with systems other than the primary Azure AD instance
+- Mobile device hardware replacement or MDM migration to Google Endpoint Management (client to handle separately)
+- Any work related to HIPAA compliance configuration (client's compliance team will manage independently)
+
+3. PROJECT TEAM
+
+Double Line will provide the following resources:
+- 1 Senior Project Manager (engagement lead, 20% allocation)
+- 2 Cloud Engineers (migration execution, 75% allocation each)
+- 1 Change Manager (training and adoption, 50% allocation)
+
+Client will provide:
+- Executive Sponsor with decision-making authority
+- IT Administrator with M365 global admin access
+- Department leads for each migration wave
+- 8 internal champions for train-the-trainer program
+
+4. TIMELINE
+
+Phase 1: Discovery & Assessment — Weeks 1-2
+Phase 2: Planning & Architecture — Week 2-3
+Phase 3: Build & Configuration — Weeks 3-4
+Phase 4: Migration Execution — Weeks 4-6
+Phase 5: Cutover & Go-Live — Week 7
+Phase 6: Hypercare — Weeks 7-8
+
+5. ASSUMPTIONS
+
+- Client will provide VPN access to on-premises systems within 5 business days of SOW execution
+- Client IT team will be available for minimum 10 hours/week during migration phases
+- Mailbox migrations will run during off-hours (evenings/weekends) to minimize user disruption
+- Client will communicate migration schedule to end users at least 2 weeks before their wave
+- Source environment will remain accessible for 30 days post-migration for data verification
+- Maximum individual mailbox size is 50 GB
+
+6. ACCEPTANCE CRITERIA
+
+- All 2,200 users successfully migrated to Google Workspace
+- Email delivery functional for all users (internal and external)
+- Shared drives accessible with correct permissions
+- SSO authentication operational for all users
+- Client IT team completes knowledge transfer sessions
+- Zero P1 issues open at project closure
+
+7. PRICING
+
+Fixed Price: $187,500.00 USD
+Payment Terms: 40% at SOW execution, 30% at migration start, 30% at project closure
+
+Change requests for out-of-scope work will be quoted separately.
+
+8. SIGNATURES
+
+[Signature blocks omitted for sample purposes]

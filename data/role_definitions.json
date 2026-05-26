@@ -1,0 +1,32 @@
+{
+  "roles": [
+    {
+      "id": "Engineer",
+      "title": "Cloud Engineer",
+      "typical_allocation": 0.75,
+      "description": "Technical implementation, migration execution, infrastructure configuration",
+      "jira_component": "Engineering"
+    },
+    {
+      "id": "PM",
+      "title": "Senior Project Manager",
+      "typical_allocation": 0.20,
+      "description": "Engagement lead, client communication, risk management, reporting",
+      "jira_component": "Project Management"
+    },
+    {
+      "id": "Change Manager",
+      "title": "Change Manager",
+      "typical_allocation": 0.50,
+      "description": "Training delivery, adoption planning, communications, stakeholder engagement",
+      "jira_component": "Change Management"
+    },
+    {
+      "id": "Security",
+      "title": "Security Engineer",
+      "typical_allocation": 0.50,
+      "description": "Compliance assessment, security configuration, FedRAMP controls, ATO preparation",
+      "jira_component": "Security & Compliance"
+    }
+  ]
+}
