@@ -8,7 +8,7 @@ import re
 from dataclasses import dataclass, field, asdict
 from typing import Optional
 
-import google.generativeai as genai
+from google import genai
 
 
 @dataclass
@@ -122,19 +122,16 @@ def parse_sow(sow_text: str) -> ParsedSOW:
     """
     Send SOW text to Gemini API and parse the structured response.
     """
-    genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
+    client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
-    model = genai.GenerativeModel(
-        model_name="gemini-1.5-pro",
-        system_instruction=SYSTEM_PROMPT,
-    )
-
-    response = model.generate_content(
-        f"Analyze this Statement of Work and extract the structured information:\n\n{sow_text}",
-        generation_config={
-            "temperature": 0.1,
-            "max_output_tokens": 8192,
-        },
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents=f"Analyze this Statement of Work and extract the structured information:\n\n{sow_text}",
+        config=genai.types.GenerateContentConfig(
+            system_instruction=SYSTEM_PROMPT,
+            temperature=0.1,
+            max_output_tokens=8192,
+        ),
     )
 
     raw = response.text
